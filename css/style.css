@@ -15,10 +15,11 @@ body {
 /* HEADER / NAVIGATION */
 
 .header {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px 60px;
     background-color: #0d0d0d;
 }
 
@@ -72,6 +73,20 @@ body {
 }
 
 .logo img {
-    width: 150px;
+    width: 120px;
     height: auto;
 }
+
+.logo {
+    position: absolute;
+    left: 60px;
+    top: 25px;
+}
+
+.navigation {
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+}
+/* translateX(-50%) centrerer navigationen i forhold til venstre side af skærmen */
