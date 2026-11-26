@@ -339,15 +339,14 @@ border-bottom: 0.5px solid #d9d9d9;
 .app-baggrund{
     position: relative
 }
-.app-baggrund img{
+.app-grid {
     width: 1200px;
-    height: 1000 px;
-    padding: 100px;;
+    height: auto;
+    padding: 100px;
     display: block;
     margin: auto;
-    box-shadow: #ffffff;
-
 }
+
 
 .app-knap{
     display: block;
@@ -371,7 +370,7 @@ border-bottom: 0.5px solid #d9d9d9;
     text-decoration: none;
     transition: all 0.3s ease;
 
-    bottom: 15%;
+    bottom: 20%;
     Left: 65%;
 }
 
@@ -381,3 +380,94 @@ border-bottom: 0.5px solid #d9d9d9;
     transform: translateY(5px);
 }  
 
+.app-overskrift{
+    font-family: "Lexend Tera", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12%;
+}
+
+.app-telefon img{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 23%;
+    transform: translatex(-50%);
+}
+
+.app-tekst {
+    position: absolute;
+    font-family: "Lexend Tera", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.aktivitet {
+    top: 48%;
+    left: 18%;
+}
+
+.soevn {
+    top: 30%;
+    left: 68%;
+}
+
+.puls {
+    top: 70%;
+    left: 30%;
+}
+
+.udvikling {
+    top: 77%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* stiblede linjer fra tekst til telefon i app-sektion*/
+.app-linje {
+    position: absolute;
+    border-top: 2px dotted #0d0d0d;
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+.linje-aktivitet {
+    width: 15%;
+    top: 47%;
+    left: 28%;
+    transform: rotate(-25deg);
+}
+
+.linje-soevn {
+    width: 15%;
+    top: 39%;
+    left: 55%;
+    transform: rotate(-25deg);
+}
+
+.linje-puls {
+    width: 12%;
+    top: 69%;
+    left: 37%;
+    transform: rotate(-55deg);
+}
+
+.linje-udvikling {
+    width: 6%;
+    top: 68%;
+    left: 50%;
+    transform: rotate(90deg);
+}

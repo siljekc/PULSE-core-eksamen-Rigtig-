@@ -36,7 +36,6 @@ venstrePil.addEventListener("click", function() {
     skiftUr();
 });
 
-
 //prikker under billeder, som skifter ved billede-skift//
 const prikker = document.querySelectorAll(".prik");
 function opdaterPrikker() {
