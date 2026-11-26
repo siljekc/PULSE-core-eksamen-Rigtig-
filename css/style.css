@@ -17,6 +17,8 @@ body {
 .header {
     position: relative;
     display: flex;
+    height: 190px;
+    box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
     padding: 30px 60px;
@@ -44,7 +46,7 @@ body {
 
 /* NAVIGATIONSKNAPPER */
 
-.navigation a {
+.navigation a{
     display: inline-block;
 
     color: #171717;
@@ -57,17 +59,15 @@ body {
 
     padding: 8px 15px;
     border-radius: 30px;
-
-    background-color: rgba(80, 90, 120, 0.10);
-
+    background: rgba(55, 85, 145, 0.50);
     transition: all 0.3s ease;
 }
 
 /* HOVER-EFFEKT */
 
 .navigation a:hover {
-    background-color: rgba(55, 85, 145, 0.55);
-    color: white;
+        background-color:rgba(55,85,145,0.55);
+        color: white;
 
     transform: translateY(5px);
 }
@@ -91,19 +91,25 @@ body {
 }
 /* translateX(-50%) centrerer navigationen i forhold til venstre side af skærmen */
 
+
 /* HERO SEKTION */
 .hero {
+position: relative;
 display: flex;
 align-items: center;
-justify-content: space-between
-min-height: 650 px;
+justify-content: space-between;
+min-height: 650px;
 padding: 0 60px;
+border-top: 0.5px solid #d9d9d9;
+border-bottom: 0.5px solid #d9d9d9;
+
 }
+
 
 .hero-tekst{
     position: absolute;
-    left: 135px;
-    top: 138px;
+    left: 50px;
+    top: 30px;
     max-width: 500px;
 }
 
@@ -113,7 +119,7 @@ padding: 0 60px;
     font-weight: 700;
     font-size: 48px;
     letter-spacing: 0.08em;
-    text-shadow: 2px 2px 6px rgba(white, 0.3);
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
     margin-bottom: 25px;
 }
 
@@ -127,82 +133,95 @@ padding: 0 60px;
     margin-bottom: 35px;
 }
 
-.hero-knap{
-    display: inline-block;
-    padding 14px; 28px;
-    border: 1px solid white;
-    border-radius: 30px;
-    color: white;
+.shop-knap{
+    display: block;
+    width: fit-content;
+    margin: 40px 0 0 0;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(
+    120deg,
+    #dce5f2,
+    #d9d7e9,
+    #c9cbd5
+    );
+
+    color: black;
+    font-family: "Sulphur Point", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 6px;
     text-decoration: none;
-    letter-spacing: 3px;
-    transition: 0,3s ease;
+
+    transition: all 0.3s ease;
 }
 
-.hero-knap:hover {
-    background-color:white
-    color: #111111;
+.shop-knap:hover {
+    background:rgba(55,85,145,1);
+    color: #ffff;
+    transform: translateY(5px);
 }
 
 /* HERO BILLEDER AF UR*/
 .hero-billeder{
     position: absolute;
-    right: 60px;
-    top: 80px;
+    right: 130px;
+    top: 90px;
     width: 45%;
-    height: 500px;
+    height: 450px;
 }
 
 .ur-galleri{
-    width: 100%;
-    height: 500px;
-    overflow-x: auto;
-    overflow-y: hidden;
     position: relative;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
+    width: 500px;
+    height: 450px;
+    margin-left: auto;
+    overflow: hidden;
+    background-color: #d9d9d9;
+    border-radius: 40px;
 }
 
 .ur-billeder{
     display: flex;
     width: 100%;
     height: 100%;
-    transition: transfirm 0.5s ease;
+    transition: transform 0.5s ease
 }
 
 /* DE ENKELTE UR-BILLEDER */
 .ur-billeder img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain
 }
 
 /* PILE I UR GALLERIET*/
-.ur-galleri{
-    width: 100px;
-    height: 500px;
-    overflow: hidden;
-    position: relative
-}
-
-
 .pil{
     position: absolute;
     top: 50%;
     transform: translateY(-50);
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.305);
     color: white;
-    border: 1px solid white;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    border: 1px solid #ffffff;
+    border-radius: 40%;
+    width: 20px;
+    height: 20px;
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: 0.3s ease;
+    
+}
+
+.venstre-pil::before,
+.hoejre-pil::before {
+    line-height: 1;
+    transform: translateY(-1px);
 }
 
 .venstre-pil{
@@ -213,6 +232,152 @@ padding: 0 60px;
     right: 15px;
 }
 
+.venstre-pil::before {
+    content: "‹";
+    font-size: 13px;
+    color: white;
+}
+
+.hoejre-pil::before {
+    content: "›";
+    font-size: 13px;
+    color: white;
+}
+
 .pil.hover{
     background-color: rgba(255,255,255,0.5);
 }
+
+/*prik indikatorer til billeder*/
+.prik{
+    width: 8px;
+    height: 8px;
+    background-color: #dce5f2;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.prik-indikator{
+    width:500px;
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.aktiv{
+    width: 10px;
+    height: 10px;
+    background-color: #fcfcfc;
+}
+
+
+.features-overskrift{
+    font-family: "Lexend Tera", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
+    padding-top: 30px;
+    margin-bottom: 25px;
+}
+
+.features-boks{
+    width: 550px;
+    height: 200px;
+    background-color: #9D9D9D;
+    border-radius: 40px;
+    padding: 40px;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.features-container{
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+    overflow-x: auto;
+    padding-bottom: 80px;
+    border-bottom: 0.5px solid #d9d9d9;
+
+}
+
+.features-boks:hover{
+    background-color:#d9d9d9;
+}
+
+.features-boks img{
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.features-boks h3{
+    font-family: "Lexend tera";
+    font-weight: 300;
+    font-size: 16px;
+    text-align: left;
+    color: #0d0d0d;
+}
+
+.features-boks p{
+    font-family: "Lexend tera";
+    font-weight: 300px;
+    font-size: 13px;
+    text-align: left;
+    color:#0d0d0d;
+}
+
+.app-baggrund{
+    position: relative
+}
+.app-baggrund img{
+    width: 1200px;
+    height: 1000 px;
+    padding: 100px;;
+    display: block;
+    margin: auto;
+    box-shadow: #ffffff;
+
+}
+
+.app-knap{
+    display: block;
+    width: fit-content;
+    position: absolute;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(
+    120deg,
+    #dce5f2,
+    #d9d7e9,
+    #c9cbd5
+    );
+
+    color: black;
+    font-family: "Sulphur Point", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    bottom: 15%;
+    Left: 65%;
+}
+
+.app-knap:hover {
+    background:rgba(55,85,145,1);
+    color: #ffff;
+    transform: translateY(5px);
+}  
+

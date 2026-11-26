@@ -11,6 +11,7 @@ let nuvaerendeUr = 0;
 // Funktion til at skifte billede//
 function skiftUr() {
     urBilleder.style.transform = `translateX(-${nuvaerendeUr * 100}%)`;
+    opdaterPrikker();
 }
 
 // gør så der skiftes til næste ur i rækken når der klikkes//
@@ -34,3 +35,20 @@ venstrePil.addEventListener("click", function() {
 
     skiftUr();
 });
+
+
+//prikker under billeder, som skifter ved billede-skift//
+const prikker = document.querySelectorAll(".prik");
+function opdaterPrikker() {
+    prikker[0].classList.remove("aktiv");
+    prikker[1].classList.remove("aktiv");
+    prikker[2].classList.remove("aktiv");
+
+    if(nuvaerendeUr === 0) {
+        prikker[0].classList.add("aktiv");
+    } else if (nuvaerendeUr === 1){
+        prikker[1].classList.add("aktiv");
+    } else{
+        prikker[2].classList.add("aktiv");
+    }
+}
