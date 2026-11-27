@@ -471,3 +471,92 @@ border-bottom: 0.5px solid #d9d9d9;
     left: 50%;
     transform: rotate(90deg);
 }
+
+/*STYLER FOOTER*/
+footer{
+    background-color:#0d0d0d;
+    color: white;
+    border-top: 0.5px solid #d9d9d9;
+    border-bottom: 0.5px solid #d9d9d9;
+    padding: 20px 40px;
+
+}
+
+.footer-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo img{
+    width: 100px;
+    height: auto;
+}
+
+.footer-links a{
+    font-family: "Sulphur Point";
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contact a{
+    font-family: "Sulphur Point";
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact img{
+    width: 35px;
+    height: auto;
+    align-items: center;
+}
+
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-brand{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 20px;
+}
+
+.footer-navn{
+    font-family: "Lexend Tera";
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.footer-slogan{
+    font-family: "Lexend Tera";
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    font-family: "Sulphur Point";
+    font-size: 10px;
+}
