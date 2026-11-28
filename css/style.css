@@ -15,7 +15,6 @@ body {
 /* HEADER / NAVIGATION */
 
 .header {
-    position: relative;
     display: flex;
     height: 190px;
     box-sizing: border-box;
@@ -26,8 +25,15 @@ body {
 }
 
 /* PANEL-BAR */
-
+/* position sticky gør så panelet følger med når der scrolles ned på siden*/
 .navigation {
+    position: sticky;
+    top: 20px;
+    z-index: 1000;
+
+    width: fit-content;
+    margin: -120px auto 60px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +50,8 @@ body {
     );
 }
 
+
+
 /* NAVIGATIONSKNAPPER */
 
 .navigation a{
@@ -59,7 +67,7 @@ body {
 
     padding: 8px 15px;
     border-radius: 30px;
-    background: rgba(55, 85, 145, 0.50);
+    background: rgba(55, 85, 145, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -82,14 +90,6 @@ body {
     left: 60px;
     top: 25px;
 }
-
-.navigation {
-    position: absolute;
-    left: 50%;
-    top: 70px;
-    transform: translateX(-50%);
-}
-/* translateX(-50%) centrerer navigationen i forhold til venstre side af skærmen */
 
 
 /* HERO SEKTION */
